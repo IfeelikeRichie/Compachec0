@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -6,21 +7,25 @@
     /* border: 1px solid red ; */
 }
 body{
-    background-color: rgb(0, 53, 43);
+    background-image: url('../imgs/backgroundimg.png ' );
+    background-repeat: no-repeat;
+    background-position: -250px -150px;
+    background-color: #272727;
     color: whitesmoke;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
     min-height: 95vh;
     display: block;
 
 
 }
+/* -------------------Desktop----------------- */
+/* ___________Menu de barra lateral___________ */
 .fflex{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* ___________Menu de barra lateral___________ */
 .sidebarmenu{
     position: fixed ;
     left: 0;
@@ -86,12 +91,14 @@ body{
     min-height: 90vh;
     min-width: 90vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-image: url(/imgs/compacheco_principal_img.png);
 
 }
 .maincontent .left{
+    /* position: absolute;
+    left: 0; */
     min-height: 45vh;
     min-width: 45vh;
     display: flex;
@@ -99,13 +106,25 @@ body{
     align-items: center;
 }
 .maincontent .left img{
-
-    float: left;
-    width: 80%;
+    position: absolute;
+    left: 0;
+    width: 50%;
+    margin: 0;
 }
 .maincontent .right{
     min-height: 45vh;
     min-width: 45vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.right h1{
+    position: absolute;
+    left:51%;
+    font-size: 80px;
+}
+.right img{
+    width: 100%;
 }
 
 
@@ -115,12 +134,27 @@ body{
     display: block;
 }
 .content .top{
+    margin: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.content .bottom{
+.top .left{
+    min-width: 45vh;
+    min-height: 45vh;
+}
+.top .right{
+    text-align: left;
+    font-size: 30px;
+
+}
+.right h2{
+    font-size: 70px;
+}
+.content  .bottom{
+    margin: 20px;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -141,4 +175,70 @@ body{
 }
 .bottom .right{
     width: 45vh;
+}
+
+/* ----------------tablet----------------- */
+@media only screen and (max-width: 840px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       
+    }
+
+
+    .sidebarmenu{
+        margin-top: 20px;
+        height: 45px;
+        width: 40vh;
+        position: fixed;
+        top: 0;
+        left: auto;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+
+    }
+    .sidebarmenu .top{
+        min-height: auto;
+        margin: 0;
+        
+
+    }
+    .sidebarmenu .bottom{
+        min-height: auto;
+        margin: 0;
+    }
+    .maincontent{
+        display: block;
+    }
+    .left img{
+        padding-top: 40px;
+    }
+    .content{
+        flex-direction: column;
+    }
+    .content .top{
+        flex-direction: column;
+    }
+    .content .bottom{
+        flex-direction: column;
+    }
+    .bottom .left{
+        display: flex;
+        flex-direction:row ;
+        justify-content: center;
+        align-items: center;
+    }
+    .bottom h2{
+        text-align: right;
+        padding-right: 10px;
+
+
+    }
+    .bottom .cannabis{
+        text-align: left;
+        padding-left: 10px;
+        font-size: 15px;
+    }
 }
